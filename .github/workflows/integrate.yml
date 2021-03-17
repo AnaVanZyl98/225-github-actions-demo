@@ -18,7 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - run: npm install eslint --save-dev
-      - run: npm i -g eslint
       - run: eslint .
       - run: eslint . --fix
       
