@@ -15,7 +15,7 @@ jobs:
       - run: npm test
       - run: npm run build
   run_lint:  
-      - run: npm i-g eslint
+      - run: npm i -g eslint
       - run: eslint .
       - run: eslint . --fix
  
