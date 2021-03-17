@@ -15,8 +15,10 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run build
-      - uses: w9jds/firebase-action@master
+      - uses: w9jds/heroku-deploy@v3.12.12 
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          #heroku_app_name: "YOUR APP's NAME" #Must be unique in Heroku
+          heroku_email: "panchenkoanastasia@hotmail.com"
