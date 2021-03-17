@@ -14,12 +14,9 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
-  run_lint: 
-    runs-on: ubuntu-latest
-    steps: 
       - run: npm install eslint --save-dev
-      - run: eslint .
-      - run: eslint . --fix
+      - run: npx eslint .
+      - run: npx eslint . --fix
       
  
 
