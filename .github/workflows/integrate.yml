@@ -14,12 +14,11 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
-      - run: npm run build
-  run_lint:  
+      - run: npm run build 
       - run: npm install eslint --save-dev
       - run: npm i -g eslint
       - run: eslint . --fix
-      
+
  
 
 
