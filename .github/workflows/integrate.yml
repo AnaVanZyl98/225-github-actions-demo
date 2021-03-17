@@ -14,9 +14,14 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
-      - run: npm install eslint --save-dev
-      - run: npx eslint .
-      - run: npx eslint . --fix
+      - uses: samuelmeuli/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          eslint: true
+     # - run: npm install eslint --save-dev
+      #- run: npx eslint .
+      # - run: npx eslint . --fix
       
  
 
